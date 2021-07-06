@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "0.0.1"
+lvers = "0.0.2"
 
 class CallableModule():
 
@@ -50,7 +50,13 @@ def main(val, option = "false"):
     except:
         main(val, option)
     finally:
-        return output
+        if option == false:
+            return output
+        else:
+            if "-" in output:
+                main(val, option)
+            else:
+                return output
 
 
 #!------------------------------!
