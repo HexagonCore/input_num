@@ -19,11 +19,11 @@ lvers = "0.0.1"
 
 
 def checkver():
-    packagenm = 'ngrok_info'
+    packagenm = 'nput_num'
     responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
     latest_version = responseinfl.json()['info']['version']
     if latest_version != lvers:
-        print("You are not using latest version, run 'python3 -m pip install --upgrade ngrok_info' three times")
+        print("You are not using latest version, run 'python3 -m pip install --upgrade input_num' three times")
 
         
 checkver()
