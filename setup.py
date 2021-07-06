@@ -1,15 +1,15 @@
 from setuptools import setup
 
-setup(name='ngrok_info',
-      version='1.1.15',
-      description='Easy and fast tool written in python 3 to get info about running ngrok tunnel',
+setup(name='input_num',
+      version='0.0.1',
+      description='Python package - input_num is like input but it only accepts numbers',
       long_description=open('README.md').read(),
       long_description_content_type='text/markdown',
-      url='https://github.com/HexagonCore/get-ngrok-tunnel-info',
+      url='https://github.com/HexagonCore/input_num',
       author='Hexagon Core Development',
       author_email='mp3martin.developer@gmail.com',
       license='MIT',
-      packages=['ngrok_info'],
+      packages=['input_num'],
       install_requires=[
           'markdown',
           'requests'
