@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='input_num',
-      version='0.0.2',
+      version='0.0.3',
       description='Python package - input_num is like input but it only accepts numbers',
       long_description=open('README.md').read(),
       long_description_content_type='text/markdown',
