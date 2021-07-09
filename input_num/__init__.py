@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "0.0.9"
+lvers = "0.0.10"
 
 class CallableModule():
 
@@ -54,7 +54,7 @@ def main(val, option = "true"):
             main(val, option)
         finally:
             if str(option).lower() == "true" or str(option).lower() == True:
-                if output == None or if output == "None":
+                if output == None or output == "None":
                     return str("")
                 else:
                     return int(output)
@@ -63,7 +63,7 @@ def main(val, option = "true"):
                     if "-" in str(output):
                         main(val, option)
                     else:
-                        if output == None or if output == "None":
+                        if output == None or output == "None":
                             return str("")
                         else:
                             return int(output)
