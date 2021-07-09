@@ -6,7 +6,7 @@
 
 
 # input_num
-Python package - input_num is like input but it only accepts numbers
+Python package - **input_num** is like input but it **only accepts numbers**
 ___
 ### ‎
 
@@ -20,7 +20,13 @@ ___
 
 ## Usage
 * ### Windows / macOS / Linux
-	Add this to your script: `import LOL`<br/> ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎`LOL`
+	Add this to your script:
+	`import input_num`
+	`input_num("Enter your age: ")`
+	
+	If you want to allow only positive numbers (numbers WITHOUT **-** at the begining), use `input_num("Something", False)`.
+	*False* just means **Allow negative numbers = False**
+	And it is **optional argument**
 	 ‎
 	
 	
@@ -37,7 +43,7 @@ ___
 ### ‎
 ## FAQ
 * ### Question
-	Answer
+	Answernot enough
 ### ‎
 
 
@@ -45,3 +51,4 @@ Do you like this? Hit that ⭐!
 Use the star button as way to show us, that it works              
 Forks and pull requests are welcome of course
  
+

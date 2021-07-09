@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "0.0.5"
+lvers = "0.0.6"
 
 class CallableModule():
 
