@@ -15,7 +15,7 @@ import time
 #!                              !
 #!------------------------------!
 
-lvers = "0.0.7"
+lvers = "0.0.8"
 
 class CallableModule():
 
@@ -44,15 +44,15 @@ checkver()
 
 def main(val, option = "true"):
     global output
-    try:
-        output = input(val)
-        nothing = float(int(output))
-    except:
-        main(val, option)
-    finally:
-        if " " in str(output).lower() or str(output).lower() == "" or str(output).lower() == None:
-            return str("")
-        else:
+    output = input(val)
+    if " " in str(output).lower() or str(output).lower() == "" or str(output).lower() == None:
+        return str("")
+    else:
+        try:
+            nothing = float(int(output))
+        except:
+            main(val, option)
+        finally:
             if str(option).lower() == "true" or str(option).lower() == True:
                 return int(output)
             else:
