@@ -46,7 +46,7 @@ ___
 	    Default value is **True**
 	
 	 ‎
-⚠️If you want to set only second option, set the first option too⚠️
+⚠️**If you want to set only second option, set the first option too**⚠️
 	
 
 ### ‎
