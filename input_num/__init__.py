@@ -4,7 +4,7 @@
 ## -------------------------------------------------- ##
 import socket
 import json
-import request
+import requests
 import os 
 import sys
 import time
