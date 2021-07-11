@@ -22,8 +22,7 @@ ___
 * ### Windows / macOS / Linux
 	Add this to your script: `import input_num` `input_num("Enter your age: ")`
 	
-	 ‎
-	 ‎
+	
     Command scheme: `input_num("Question: ", AllowNegativeNumbers, DoesPressingEnterReturnNothing)`
 	
 	 ‎
