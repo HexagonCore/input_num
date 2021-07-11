@@ -24,11 +24,29 @@ ___
 	`import input_num`
 	`input_num("Enter your age: ")`
 	
-	If you want to allow only positive numbers (numbers WITHOUT **-** at the begining), use `input_num("Something", False)`.
-	*False* just means **Allow negative numbers = False**
-	And it is **optional argument**
 	 ‎
 	
+	 ‎
+	Command scheme: `input_num("Question: ", AllowNegativeNumbers, DoesPressingEnterReturnNothing)`
+	
+	 ‎
+	
+	 ‎
+	* First option:
+	    If you want to allow only positive numbers (numbers WITHOUT **-** at the begining), use `input_num("Something", False)`.
+	    *False* just means **Allow negative numbers = False**
+	    And it is **optional argument**
+	    Default value is **True**
+	
+	 ‎
+	* Second option:
+	    There is also second option, does pressing enter return "" ? Set it to **False** to make pressing enter **ask you again**.
+	    Example: `input_num("Try pressing enter: ", True, False)` - this allows negative numbers and disallows entering nothing.
+	    It is **optional argument**
+	    Default value is **True**
+	
+	 ‎
+⚠️If you want to set only second option, set the first option too⚠️
 	
 
 ### ‎

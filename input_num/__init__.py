@@ -5,17 +5,17 @@
 import socket
 import json
 import requests
-import os 
+import os
 import sys
 import time
 
+# !------------------------------!
+# ! Start                        !
+# !                              !
+# !------------------------------!
 
-#!------------------------------!
-#! Start                        !
-#!                              !
-#!------------------------------!
+lvers = "0.1.0"
 
-lvers = "0.0.13"
 
 class CallableModule():
 
@@ -28,6 +28,7 @@ class CallableModule():
     def __getattr__(self, attr):
         return object.__getattribute__(self._wrapped, attr)
 
+
 sys.modules[__name__] = CallableModule(sys.modules[__name__])
 
 
@@ -38,43 +39,53 @@ def checkver():
     if latest_version != lvers:
         print("You are not using latest version, run 'python3 -m pip install --upgrade input_num' three times")
 
-        
+
 checkver()
 
 
-def main(val, option = "true"):
+def output_num(val):
+    global opt2l
+    if val == None or val == "None":
+        if str(opt2l).lower() == "false" or str(opt2l).lower() == False:
+            return main(val, option, option2)
+        else:
+            return str("")
+    else:
+        return int(val)
+
+
+def main(val, option="true", option2="true"):
+    global opt2l
+    opt2l = option2
     global output
     output = input(val)
+    # Did user just pressed enter?
     if " " in str(output).lower() or str(output).lower() == "" or str(output).lower() == None:
-        return str("")
+        if str(opt2l).lower() == "false" or str(opt2l).lower() == False:
+            return main(val, option, option2)
+        else:
+            return str("")
     else:
+        # He did not just press enter
         try:
             nothing = float(int(output))
         except:
-            return main(val, option)
+            # it is not number
+            return main(val, option, option2)
         finally:
+            # it is number
             if str(option).lower() == "true" or str(option).lower() == True:
-                if output == None or output == "None":
-                    return str("")
-                else:
-                    return int(output)
+                return output_num(output)
             else:
                 if str(option).lower() == "false" or str(option).lower() == False:
                     if "-" in str(output):
-                        return main(val, option)
+                        return main(val, option, option2)
                     else:
-                        if output == None or output == "None":
-                            return str("")
-                        else:
-                            return int(output)
+                        return output_num(output)
                 else:
-                    if output == None or output == "None":
-                        return str("")
-                    else:
-                        return int(output)
+                    return output_num(output)
 
-
-#!------------------------------!
-#!       End                    !
-#!                              !
-#!------------------------------!
+# !------------------------------!
+# !       End                    !
+# !                              !
+# !------------------------------!
