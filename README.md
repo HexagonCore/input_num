@@ -24,12 +24,7 @@ ___
 	`import input_num`
 	`input_num("Enter your age: ")`
 	
-	 ‎
-	
-	 ‎
 	Command scheme: `input_num("Question: ", AllowNegativeNumbers, DoesPressingEnterReturnNothing)`
-	
-	 ‎
 	
 	 ‎
 	* First option:
@@ -38,7 +33,6 @@ ___
 	    And it is **optional argument**
 	    Default value is **True**
 	
-	 ‎
 	* Second option:
 	    There is also second option, does pressing enter return "" ? Set it to **False** to make pressing enter **ask you again**.
 	    Example: `input_num("Try pressing enter: ", True, False)` - this allows negative numbers and disallows entering nothing.
