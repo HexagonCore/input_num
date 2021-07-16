@@ -24,6 +24,11 @@ jobs:
       run: |
         echo $RELEASE_VERSION
         echo ${{ env.RELEASE_VERSION }}
+    - name: Find and Replace
+      uses: jacobtomlinson/gha-find-replace@master
+      with:
+        find: '__version__ = "develop"'
+        replace: "__version__ = $RELEASE_VERSION"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
