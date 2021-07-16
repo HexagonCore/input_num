@@ -21,7 +21,7 @@ jobs:
     - name: Autobump version
       run: |
         # from refs/tags/1.2.3 get 1.2.3
-        VERSION=$(echo $GITHUB_REF | sed 's#.*/v##')
+        VERSION=$(echo $GITHUB_REF)
         PLACEHOLDER='__version__ = "develop"'
         VERSION_FILE='input_num/__init__.py'
         # ensure the placeholder is there. If grep doesn't find the placeholder
