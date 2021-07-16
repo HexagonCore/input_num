@@ -14,7 +14,7 @@ import time
 # !                              !
 # !------------------------------!
 
-lvers = "0.1.0"
+__version__ = "0.1.1"
 
 
 class CallableModule():
@@ -36,7 +36,7 @@ def checkver():
     packagenm = 'input_num'
     responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
     latest_version = responseinfl.json()['info']['version']
-    if latest_version != lvers:
+    if latest_version != __version__:
         print("You are not using latest version, run 'python3 -m pip install --upgrade input_num' three times")
 
 
