@@ -8,7 +8,7 @@
 # input_num
 Python package - **input_num** is like input but it **only accepts numbers**
 ___
-### ‎
+### ‎rnot enough
 
 ## Instalation
 * ### Windows / macOS
@@ -54,7 +54,7 @@ ___
 ### ‎
 ## FAQ
 * ### Question
-	Answernot enough
+	Answer
 ### ‎
 
 
