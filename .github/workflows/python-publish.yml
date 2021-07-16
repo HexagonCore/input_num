@@ -20,7 +20,7 @@ jobs:
         python-version: '3.x'
     - name: Autobump version
       run: |
-        # from refs/tags/v1.2.3 get 1.2.3
+        # from refs/tags/1.2.3 get 1.2.3
         VERSION=$(echo $GITHUB_REF | sed 's#.*/v##')
         PLACEHOLDER='__version__ = "develop"'
         VERSION_FILE='input_num/__init__.py'
