@@ -12,7 +12,7 @@ with open('input_num/__init__.py', 'rb') as f:
 
 
 setup(name='input_num',
-      version='version',
+      version=version,
       description='Python package - input_num is like input but it only accepts numbers',
       long_description=open('README.md').read(),
       long_description_content_type='text/markdown',
