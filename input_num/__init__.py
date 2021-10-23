@@ -31,14 +31,26 @@ class CallableModule():
 
 sys.modules[__name__] = CallableModule(sys.modules[__name__])
 
+def online():
+    try:
+        # connect to the host -- tells us if the host is actually
+        # reachable
+        sock = socket.create_connection(("www.google.com", 80))
+        if sock is not None:
+            sock.close
+        return True
+    except OSError:
+        pass
+    return False
 
 def checkver():
-    packagenm = 'input_num'
-    responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
-    latest_version = responseinfl.json()['info']['version']
-    if latest_version != __version__:
-        print("You are not using latest version, run 'python3 -m pip install --upgrade input_num' three times")
-
+    if online() == True:
+        packagenm = 'input_num'
+        latest_version = "ERR"
+        responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
+        latest_version = responseinfl.json()['info']['version']
+        if latest_version != __version__:
+            print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' THREE TIMES in normal terminal".format(packagenm))
 
 checkver()
 
