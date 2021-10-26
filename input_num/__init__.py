@@ -63,7 +63,12 @@ def output_num(val):
         else:
             return str("")
     else:
-        return int(val)
+        try:
+            return int(val)
+        except:
+            return str("")
+        finally:
+            pass
 
 
 def main(val, option="true", option2="true"):
