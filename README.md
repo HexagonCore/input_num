@@ -23,7 +23,7 @@ ___
 	Add this to your script: `import input_num` `input_num("Enter your age: ")`
 	
 	 ‎
-    Command scheme: `input_num("Question: ", AllowNegativeNumbers, DoesPressingEnterReturnNothing)`
+   Command scheme: `input_num("Question: ", AllowNegativeNumbers, DoesPressingEnterReturnNothing)`
 	
 	 ‎
 	* First option:
