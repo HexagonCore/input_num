@@ -37,12 +37,16 @@ class CallableModule():
 sys.modules[__name__] = CallableModule(sys.modules[__name__])
 
 def allow_update():
+    global silent
+    global updated
     silent = False
     if updated == 0:
         updated = 1
         checkver()
 
 def not_silent():
+    global silent
+    global updated
     allow_update()
 
 def online():
@@ -63,7 +67,7 @@ def checkver():
         latest_version = responseinfl.json()['info']['version']
         if latest_version != __version__:
             if silent == False:
-                print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' in normal terminal".format(packagenm))
+                print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' TWO TIMES in normal terminal".format(packagenm))
 
 
 
