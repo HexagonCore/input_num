@@ -10,7 +10,9 @@ import sys
 import time
 
 global silent
-silent = False
+silent = True
+global updated
+updated = 0
 
 # !------------------------------!
 # ! Start                        !
@@ -34,11 +36,14 @@ class CallableModule():
 
 sys.modules[__name__] = CallableModule(sys.modules[__name__])
 
-def no_update():
-    silent = True
+def allow_update():
+    silent = False
+    if updated == 0:
+        updated = 1
+        checkver()
 
-def silent():
-    no_update()
+def not_silent():
+    allow_update()
 
 def online():
     try:
@@ -58,9 +63,8 @@ def checkver():
         latest_version = responseinfl.json()['info']['version']
         if latest_version != __version__:
             if silent == False:
-                print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' THREE TIMES in normal terminal".format(packagenm))
+                print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' in normal terminal".format(packagenm))
 
-checkver()
 
 
 def output_num(val):
