@@ -37,6 +37,9 @@ sys.modules[__name__] = CallableModule(sys.modules[__name__])
 def no_update():
     silent = True
 
+def silent():
+    no_update()
+
 def online():
     try:
         sock = socket.create_connection(("www.google.com", 80))
