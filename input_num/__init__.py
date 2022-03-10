@@ -9,6 +9,9 @@ import os
 import sys
 import time
 
+global silent
+silent = False
+
 # !------------------------------!
 # ! Start                        !
 # !                              !
@@ -31,6 +34,9 @@ class CallableModule():
 
 sys.modules[__name__] = CallableModule(sys.modules[__name__])
 
+def no_update():
+    silent = True
+
 def online():
     try:
         sock = socket.create_connection(("www.google.com", 80))
@@ -48,7 +54,8 @@ def checkver():
         responseinfl = requests.get(f'https://pypi.org/pypi/{packagenm}/json')
         latest_version = responseinfl.json()['info']['version']
         if latest_version != __version__:
-            print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' THREE TIMES in normal terminal".format(packagenm))
+            if silent == False:
+                print("[{}] New update is here, run 'python3 -m pip install --upgrade input_num' THREE TIMES in normal terminal".format(packagenm))
 
 checkver()
 
