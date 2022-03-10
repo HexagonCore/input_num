@@ -42,6 +42,9 @@ ___
 ⚠️ **If you want to set only second option, set the first option too** ⚠️
 	
 
+	Do you want to be reminded to update the package?
+	Run `input_num.allow_update()` RIGHT AFTER importing the package. 
+
 ### ‎
 
 ## Uninstallation
