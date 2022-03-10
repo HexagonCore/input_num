@@ -10,7 +10,7 @@ Python package - **input_num** is like input but it **only accepts numbers**
 ___
 ### ‎
 
-## Instalation
+## Installation
 * ### Windows / macOS
 	Run `python3 -m pip install input_num`
 	
